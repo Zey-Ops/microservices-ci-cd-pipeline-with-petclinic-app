@@ -29,19 +29,23 @@ sleep(2)
 fn_field = driver.find_element_by_name('firstName')
 fn = 'Zey' + str(random.randint(0, 100))
 fn_field.send_keys(fn)
+sleep(1)
 fn_field = driver.find_element_by_name('lastName')
-fn_field.send_keys('zzz')
+fn_field.send_keys('ll')
+sleep(1)
 fn_field = driver.find_element_by_name('address')
-fn_field.send_keys('aaa')
+fn_field.send_keys('xxx')
+sleep(1)
 fn_field = driver.find_element_by_name('city')
-fn_field.send_keys('Mxc')
+fn_field.send_keys('Mc')
+sleep(1)
 fn_field = driver.find_element_by_name('telephone')
 fn_field.send_keys('+1230576803')
+sleep(1)
 fn_field.send_keys(Keys.ENTER)
-
-# Wait 1 second to get updated Owner List
+sleep(1)
+# Wait 2 second to get updated Owner List
 sleep(2)
-
 # Verify that new user is added to Owner List
 if fn in driver.page_source:
     print(fn, 'is added and found in the Owners Table')
